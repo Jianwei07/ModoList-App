@@ -1,11 +1,11 @@
 import React from "react";
-import ThemeChanger from "./ThemeChanger";
 
-function Header() {
+function Header({ currentTheme }) {
   return (
-    <header>
+    <header className={`header-${currentTheme}`}>
+      {/* Header content */}
       <h1>ModoList</h1>
-      <ThemeChanger />
+      {/* ... Other header content */}
     </header>
   );
 }

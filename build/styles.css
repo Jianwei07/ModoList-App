@@ -1,3 +1,5 @@
+/* styles.css (Core Styles) */
+
 /* Reset and global styles */
 * {
   padding: 0;
@@ -11,11 +13,13 @@ html {
 /* Global background and layout */
 body {
   background: #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   padding: 0 16px;
 }
 
 /* Header styles */
 header {
+  background-color: #f5ba13;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +37,15 @@ footer {
   height: 2.5rem;
 }
 
-/* Note styles */
+header h1 {
+  /* color: #fff; */
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+footer p {
+  color: #ccc;
+}
 .note {
   background: #fff;
   border-radius: 7px;
@@ -54,7 +66,6 @@ footer {
   word-wrap: break-word;
 }
 
-/* Note delete button styles */
 .note button {
   position: relative;
   float: right;
@@ -67,7 +78,6 @@ footer {
   outline: none;
 }
 
-/* Create note form styles */
 form.create-note {
   position: relative;
   width: 480px;

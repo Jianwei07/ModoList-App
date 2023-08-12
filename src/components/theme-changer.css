@@ -1,4 +1,4 @@
-/* theme-changer.css */
+/* ThemeChanger component styles */
 .theme-changer-container {
   position: relative;
 }
@@ -72,4 +72,41 @@
 .winter {
   background-color: #2196f3;
   /* ... other winter-related styles */
+}
+
+/* Theme-specific header styles */
+/* Light Theme */
+.header-light {
+  background-color: #f5ba13;
+  /* ... other light theme header styles */
+}
+
+/* Dark Theme */
+.header-dark {
+  background-color: #333;
+  /* ... other dark theme header styles */
+}
+
+/* Summer Theme */
+.header-summer {
+  background-color: #ffeb3b;
+  /* ... other summer theme header styles */
+}
+
+/* Spring Theme */
+.header-spring {
+  background-color: #4caf50;
+  /* ... other spring theme header styles */
+}
+
+/* Fall Theme */
+.header-fall {
+  background-color: #ff9800;
+  /* ... other fall theme header styles */
+}
+
+/* Winter Theme */
+.header-winter {
+  background-color: #2196f3;
+  /* ... other winter theme header styles */
 }
