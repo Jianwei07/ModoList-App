@@ -3,7 +3,7 @@ import ThemeChanger from "./ThemeChanger";
 
 function Header() {
   return (
-    <header className="header">
+    <header>
       <h1>ModoList</h1>
       <ThemeChanger />
     </header>

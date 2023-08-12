@@ -3,11 +3,14 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
+import ThemeChanger from "./ThemeChanger";
+
+// Import statements ...
 
 function App() {
   const [notes, setNotes] = useState([]);
+  const [currentTheme, setCurrentTheme] = useState("light"); // Initial theme
 
-  // Load notes from local storage when the component mounts
   useEffect(() => {
     const savedNotes = JSON.parse(localStorage.getItem("modolist-notes"));
     if (savedNotes) {
@@ -19,6 +22,11 @@ function App() {
   useEffect(() => {
     localStorage.setItem("modolist-notes", JSON.stringify(notes));
   }, [notes]);
+
+  // Update the theme
+  const handleThemeChange = (theme) => {
+    setCurrentTheme(theme);
+  };
 
   function addNote(newNote) {
     setNotes((prevNotes) => {
@@ -35,7 +43,8 @@ function App() {
   }
 
   return (
-    <div>
+    <div className={`app ${currentTheme}`}>
+      <ThemeChanger onThemeChange={handleThemeChange} />
       <Header />
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {

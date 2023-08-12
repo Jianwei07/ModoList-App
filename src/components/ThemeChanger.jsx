@@ -1,56 +1,80 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import "./theme-changer.css";
 
 function ThemeChanger({ onThemeChange }) {
   const [selectedTheme, setSelectedTheme] = useState("light");
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef(null);
+  const [showOptions, setShowOptions] = useState(false);
 
   const handleThemeChange = (theme) => {
     setSelectedTheme(theme);
     onThemeChange(theme);
-    setMenuOpen(false);
   };
 
-  const handleOutsideClick = (e) => {
-    if (menuRef.current && !menuRef.current.contains(e.target)) {
-      setMenuOpen(false);
-    }
+  const toggleOptions = () => {
+    setShowOptions(!showOptions);
   };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, []);
 
   return (
     <div className="theme-changer-container">
-      <button
-        className={`theme-button ${menuOpen ? "active" : ""}`}
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        Theme
-      </button>
-      <div className={`theme-menu ${menuOpen ? "active" : ""}`} ref={menuRef}>
+      <div className="theme-changer">
         <button
-          className={`theme-button light ${
-            selectedTheme === "light" ? "active" : ""
-          }`}
-          onClick={() => handleThemeChange("light")}
+          className={`theme-button current-theme ${selectedTheme}`}
+          onClick={toggleOptions}
         >
-          Light
+          Current Theme: {selectedTheme}
         </button>
-        <button
-          className={`theme-button dark ${
-            selectedTheme === "dark" ? "active" : ""
-          }`}
-          onClick={() => handleThemeChange("dark")}
-        >
-          Dark
-        </button>
-        {/* Add buttons for other themes */}
+        {showOptions && (
+          <div className="theme-options">
+            <button
+              className={`theme-button light ${
+                selectedTheme === "light" ? "active" : ""
+              }`}
+              onClick={() => handleThemeChange("light")}
+            >
+              Light
+            </button>
+            <button
+              className={`theme-button dark ${
+                selectedTheme === "dark" ? "active" : ""
+              }`}
+              onClick={() => handleThemeChange("dark")}
+            >
+              Dark
+            </button>
+            <button
+              className={`theme-button summer ${
+                selectedTheme === "summer" ? "active" : ""
+              }`}
+              onClick={() => handleThemeChange("summer")}
+            >
+              Summer
+            </button>
+            <button
+              className={`theme-button spring ${
+                selectedTheme === "spring" ? "active" : ""
+              }`}
+              onClick={() => handleThemeChange("spring")}
+            >
+              Spring
+            </button>
+            <button
+              className={`theme-button fall ${
+                selectedTheme === "fall" ? "active" : ""
+              }`}
+              onClick={() => handleThemeChange("fall")}
+            >
+              Fall
+            </button>
+            <button
+              className={`theme-button winter ${
+                selectedTheme === "winter" ? "active" : ""
+              }`}
+              onClick={() => handleThemeChange("winter")}
+            >
+              Winter
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
