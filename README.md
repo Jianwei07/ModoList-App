@@ -28,4 +28,4 @@ I'm actively working on enhancing the app to provide more features and a better 
 
 I welcome contributions and collaborations to make this app even better! If you have ideas for new features, improvements, or bug fixes, please feel free to create a pull request. Let's collaborate to create a top-notch to-do list app.
 
-## ***Thank you for checking out my To-Do List app!***
+## ***Thank you for checking out my MoDoList app!***
