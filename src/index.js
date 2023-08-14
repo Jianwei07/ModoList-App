@@ -2,4 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const rootElement = document.getElementById("root");
+
+// Use createRoot to render the App component
+const root = ReactDOM.createRoot(rootElement);
+root.render(<App />);

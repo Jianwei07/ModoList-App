@@ -45,8 +45,6 @@ function App() {
     <div className={`app ${currentTheme}`}>
       <Header currentTheme={currentTheme} />
       <CreateArea onAdd={addNote} />
-      <ThemeChanger onThemeChange={handleThemeChange} />
-      {/* // Inside App.jsx */}
       {notes.map((noteItem, index) => {
         return (
           <Note
@@ -54,11 +52,12 @@ function App() {
             id={index}
             title={noteItem.title}
             content={noteItem.content}
+            created={noteItem.created}
             onDelete={deleteNote}
-            currentTheme={currentTheme} // Pass the current theme
           />
         );
       })}
+      <ThemeChanger onThemeChange={handleThemeChange} />
       <Footer />
     </div>
   );
