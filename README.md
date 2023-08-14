@@ -13,7 +13,8 @@ Welcome to my To-Do List app, ModoList! This is a single-page application built 
 ## Recent Improvements
 
 - [ ] **Styling and Theming:** Added ThemeChanging (ie, Light, Dark, Summer, Spring, Fall, Winter)
-- [ ] **Implemented Data Persistenence:** Data Rentention in Local Storage. 
+- [ ] **Implemented Data Persistenence:** Data Rentention in Local Storage.
+- [ ] **Date and Time Picker:** Allow user to record the date and time when the note was created.
 
 ## Upcoming Improvements
 
