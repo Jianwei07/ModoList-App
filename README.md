@@ -1,8 +1,8 @@
-# ModoList App
+# Simplify App
 
 ## About
 
-Welcome to my To-Do List app, ModoList! This is a single-page application built using ReactJS, designed to help you keep track of your tasks and stay organized. With the ability to add and delete notes, this app provides a straightforward solution to manage your daily tasks. Please note that I'm actively working on improving the application, so expect updates and new features in the future.
+Welcome to my To-Do List app, Simplify! This is a single-page application built using ReactJS, designed to help you keep track of your tasks and stay organized. With the ability to add and delete notes, this app provides a straightforward solution to manage your daily tasks. Please note that I'm actively working on improving the application, so expect updates and new features in the future.
 
 ## Features
 
@@ -29,4 +29,4 @@ I'm actively working on enhancing the app to provide more features and a better 
 
 I welcome contributions and collaborations to make this app even better! If you have ideas for new features, improvements, or bug fixes, please feel free to create a pull request. Let's collaborate to create a top-notch to-do list app.
 
-## ***Thank you for checking out my MoDoList app!***
+## ***Thank you for checking out my Simplify app!***
